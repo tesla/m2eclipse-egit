@@ -34,6 +34,7 @@
   <modules>
     <module>org.sonatype.ide.eclipse.egit.target-platform</module>
     <module>org.sonatype.ide.eclipse.egit</module>
+    <module>org.sonatype.ide.eclipse.egit.tests</module>
     <module>org.sonatype.ide.eclipse.egit.feature</module>
   </modules>
 
@@ -76,7 +77,8 @@
             <includes>
               <include>**/*Test.java</include>
             </includes>
-            <argLine>${tycho.test.jvmArgs}</argLine>
+            <argLine>${tycho.test.jvmArgs} -Djava.io.tmpdir=${project.build.directory}/work</argLine>
+            <appArgLine>-eclipse.keyring target/keyring -eclipse.password resources/secure-storage-password.txt -pluginCustomization ${basedir}/plugin_customization.ini</appArgLine>
             <forkedProcessTimeoutInSeconds>600</forkedProcessTimeoutInSeconds>
           </configuration>
         </plugin>

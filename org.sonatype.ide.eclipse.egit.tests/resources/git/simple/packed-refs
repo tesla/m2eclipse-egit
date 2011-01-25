@@ -1,0 +1,7 @@
+# pack-refs with: peeled 
+680a8aaad9572d964e1ad2b25a1e6c16c94f4499 refs/heads/branch-a
+9b8eb341c90c20ef743491b5f29df55e44fcf2da refs/heads/branchortag-b
+3b5a22978521094db57d91d1c2bf6fa1771b31f6 refs/heads/master
+c1f22f4a82c0e81a4c6d8566ade78f3481b1b5ac refs/tags/branchortag-b
+672abda4ff1d0eb504625f103b96971f30c68fe5 refs/tags/tag-a
+c1f22f4a82c0e81a4c6d8566ade78f3481b1b5ac refs/tags/tag-b
