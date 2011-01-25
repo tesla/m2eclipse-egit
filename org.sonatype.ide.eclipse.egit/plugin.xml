@@ -9,7 +9,7 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="org.maven.ide.eclipse.scmHandlers">
+         point="org.eclipse.m2e.core.scmHandlers">
       <handler
             class="org.sonatype.ide.eclipse.egit.internal.EgitScmHandler"
             priority="10"

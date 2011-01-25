@@ -25,8 +25,8 @@ import org.eclipse.jgit.lib.Ref;
 import org.eclipse.jgit.storage.file.FileBasedConfig;
 import org.eclipse.jgit.storage.file.FileRepository;
 import org.eclipse.jgit.transport.URIish;
-import org.maven.ide.eclipse.project.MavenProjectScmInfo;
-import org.maven.ide.eclipse.scm.ScmHandler;
+import org.eclipse.m2e.core.project.MavenProjectScmInfo;
+import org.eclipse.m2e.core.scm.ScmHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

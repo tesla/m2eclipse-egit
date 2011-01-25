@@ -12,7 +12,7 @@
   <parent>
     <groupId>org.sonatype.ide.eclipse.egit</groupId>
     <artifactId>org.sonatype.ide.eclipse.egit.parent</artifactId>
-    <version>0.12.0-SNAPSHOT</version>
+    <version>0.13.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>org.sonatype.ide.eclipse.egit.feature</artifactId>

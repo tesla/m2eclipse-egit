@@ -9,9 +9,9 @@
 <feature
       id="org.sonatype.ide.eclipse.egit.feature"
       label="Maven SCM Handler for EGit"
-      version="0.12.0.qualifier"
+      version="0.13.0.qualifier"
       provider-name="Sonatype, Inc."
-      plugin="org.maven.ide.eclipse">
+      plugin="org.eclipse.m2e.core">
 
    <description url="http://m2eclipse.sonatype.org/">
       Checkout Maven projects from Git using EGit.
@@ -36,7 +36,7 @@ http://www.eclipse.org/legal/epl-v10.html
       <import plugin="org.eclipse.core.runtime"/>
       <import feature="org.eclipse.egit" version="0.9.1" match="equivalent"/>
       <import feature="org.eclipse.jgit" version="0.9.1" match="equivalent"/>
-      <import plugin="org.maven.ide.eclipse" version="0.12.0" match="compatible"/>
+      <import plugin="org.eclipse.m2e.core" version="0.13.0" match="compatible"/>
    </requires>
 
    <plugin

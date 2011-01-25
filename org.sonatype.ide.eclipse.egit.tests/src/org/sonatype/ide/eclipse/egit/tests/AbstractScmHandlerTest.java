@@ -13,11 +13,11 @@ import java.util.Collection;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.m2e.core.project.MavenProjectScmInfo;
+import org.eclipse.m2e.core.project.ProjectImportConfiguration;
+import org.eclipse.m2e.core.wizards.MavenProjectCheckoutJob;
+import org.eclipse.m2e.tests.common.AbstractMavenProjectTestCase;
 import org.eclipse.team.core.RepositoryProvider;
-import org.maven.ide.eclipse.project.MavenProjectScmInfo;
-import org.maven.ide.eclipse.project.ProjectImportConfiguration;
-import org.maven.ide.eclipse.tests.common.AbstractMavenProjectTestCase;
-import org.maven.ide.eclipse.wizards.MavenProjectCheckoutJob;
 
 
 public class AbstractScmHandlerTest extends AbstractMavenProjectTestCase {

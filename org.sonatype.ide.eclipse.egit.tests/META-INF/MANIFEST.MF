@@ -2,12 +2,12 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Maven SCM Handler for EGit Tests
 Bundle-SymbolicName: org.sonatype.ide.eclipse.egit.tests;singleton:=true
-Bundle-Version: 0.12.0.qualifier
+Bundle-Version: 0.13.0.qualifier
 Bundle-Vendor: Sonatype
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Require-Bundle: org.maven.ide.eclipse,
- org.maven.ide.eclipse.tests.common,
- org.maven.ide.eclipse.maven_embedder,
+Require-Bundle: org.eclipse.m2e.core,
+ org.eclipse.m2e.tests.common,
+ org.eclipse.m2e.maven.runtime,
  org.sonatype.ide.eclipse.egit,
  org.eclipse.core.runtime,
  org.eclipse.core.resources,

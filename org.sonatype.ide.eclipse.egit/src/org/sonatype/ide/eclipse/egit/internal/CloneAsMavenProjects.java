@@ -12,13 +12,13 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.jface.wizard.WizardDialog;
+import org.eclipse.m2e.core.scm.ScmUrl;
+import org.eclipse.m2e.core.wizards.MavenCheckoutWizard;
 import org.eclipse.swt.dnd.Clipboard;
 import org.eclipse.swt.dnd.TextTransfer;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.handlers.HandlerUtil;
-import org.maven.ide.eclipse.scm.ScmUrl;
-import org.maven.ide.eclipse.wizards.MavenCheckoutWizard;
 
 
 /**
