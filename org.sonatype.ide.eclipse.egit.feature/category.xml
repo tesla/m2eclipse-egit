@@ -7,7 +7,7 @@
   http://www.eclipse.org/legal/epl-v10.html
 -->
 <site>
-   <feature url="features/org.sonatype.ide.eclipse.egit.feature_0.12.0.qualifier.jar" id="org.sonatype.ide.eclipse.egit.feature" version="0.12.0.qualifier">
+   <feature url="features/org.sonatype.ide.eclipse.egit.feature_0.13.0.qualifier.jar" id="org.sonatype.ide.eclipse.egit.feature" version="0.13.0.qualifier">
       <category name="m2eclipse-egit"/>
    </feature>
    <category-def name="m2eclipse-egit" label="Maven SCM Handler for EGit"/>
