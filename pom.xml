@@ -16,8 +16,8 @@
     <version>6</version>
   </parent>
 
-  <groupId>org.sonatype.ide.eclipse.egit</groupId>
-  <artifactId>org.sonatype.ide.eclipse.egit.parent</artifactId>
+  <groupId>org.sonatype.m2e.egit</groupId>
+  <artifactId>org.sonatype.m2e.egit.parent</artifactId>
   <version>0.13.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
@@ -31,10 +31,10 @@
   </properties>
 
   <modules>
-    <module>org.sonatype.ide.eclipse.egit.target-platform</module>
-    <module>org.sonatype.ide.eclipse.egit</module>
-    <module>org.sonatype.ide.eclipse.egit.tests</module>
-    <module>org.sonatype.ide.eclipse.egit.feature</module>
+    <module>org.sonatype.m2e.egit.target-platform</module>
+    <module>org.sonatype.m2e.egit</module>
+    <module>org.sonatype.m2e.egit.tests</module>
+    <module>org.sonatype.m2e.egit.feature</module>
   </modules>
 
   <build>
@@ -54,8 +54,8 @@
           <resolver>p2</resolver>
           <target>
             <artifact>
-              <groupId>org.sonatype.ide.eclipse.egit</groupId>
-              <artifactId>org.sonatype.ide.eclipse.egit.target-platform</artifactId>
+              <groupId>org.sonatype.m2e.egit</groupId>
+              <artifactId>org.sonatype.m2e.egit.target-platform</artifactId>
               <version>${project.version}</version>
               <classifier>${target.platform}</classifier>
             </artifact>
