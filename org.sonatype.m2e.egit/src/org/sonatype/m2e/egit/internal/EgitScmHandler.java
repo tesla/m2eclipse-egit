@@ -18,7 +18,9 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.egit.core.op.CloneOperation;
+import org.eclipse.egit.core.op.ListRemoteOperation;
 import org.eclipse.jgit.lib.ConfigConstants;
 import org.eclipse.jgit.lib.Constants;
 import org.eclipse.jgit.lib.Ref;
@@ -45,17 +47,22 @@ public class EgitScmHandler extends ScmHandler {
       InterruptedException {
     log.debug("Checking out project from {} to {}", info, location);
 
+    SubMonitor pm = SubMonitor.convert(monitor, 100);
     try {
       URIish uri = getUri(info);
 
-      String branch = getBranch(info);
+      String refName = getRefName(info);
 
-      CloneOperation op = new CloneOperation(uri, true /* allSelected */, new ArrayList<Ref>(), location, branch,
-          "origin");
+      ListRemoteOperation ls = new ListRemoteOperation(new FileRepository(location), uri, getTimeout());
+      ls.run(pm.newChild(1));
 
-      op.run(monitor);
+      Ref ref = ls.getRemoteRef(refName);
 
-      fixAutoCRLF(op.getGitDir());
+      CloneOperation clone = new CloneOperation(uri, true /* allSelected */, new ArrayList<Ref>(), location, ref,
+          "origin", getTimeout());
+      clone.run(pm.newChild(99));
+
+      fixAutoCRLF(clone.getGitDir());
     } catch(InvocationTargetException e) {
       Throwable cause = e.getTargetException();
       throw new CoreException(new Status(IStatus.ERROR, getClass().getName(), cause.getMessage(), cause));
@@ -65,7 +72,13 @@ public class EgitScmHandler extends ScmHandler {
       throw new CoreException(new Status(IStatus.ERROR, getClass().getName(), e.getMessage(), e));
     } catch(InterruptedException e) {
       // The monitor was canceled
+    } finally {
+      pm.done();
     }
+  }
+
+  protected int getTimeout() {
+    return 30;
   }
 
   protected URIish getUri(MavenProjectScmInfo info) throws URISyntaxException {
@@ -111,7 +124,7 @@ public class EgitScmHandler extends ScmHandler {
     return !"file".equalsIgnoreCase(protocol);
   }
 
-  protected String getBranch(MavenProjectScmInfo info) {
+  protected String getRefName(MavenProjectScmInfo info) {
     String branch = info.getBranch();
 
     if(branch == null || branch.trim().length() == 0) {

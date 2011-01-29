@@ -27,10 +27,10 @@
 </location>
 
 <location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
-<unit id="org.eclipse.egit.feature.group" version="0.9.3"/>
-<unit id="org.eclipse.egit.source.feature.group" version="0.9.3"/>
-<unit id="org.eclipse.jgit.source.feature.group" version="0.9.3"/>
-<repository location="http://download.eclipse.org/egit/updates-0.9"/>
+<unit id="org.eclipse.egit.feature.group" version="0.10.1"/>
+<unit id="org.eclipse.egit.source.feature.group" version="0.10.1"/>
+<unit id="org.eclipse.jgit.source.feature.group" version="0.10.1"/>
+<repository location="http://download.eclipse.org/egit/updates-0.10"/>
 </location>
 
 </locations>
