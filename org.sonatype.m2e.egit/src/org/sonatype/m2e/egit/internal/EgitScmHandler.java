@@ -41,7 +41,8 @@ public class EgitScmHandler extends ScmHandler {
   public static final String GIT_SCM_ID = "scm:git:";
 
   @Override
-  public void checkoutProject(MavenProjectScmInfo info, File location, IProgressMonitor monitor) throws CoreException {
+  public void checkoutProject(MavenProjectScmInfo info, File location, IProgressMonitor monitor) throws CoreException,
+      InterruptedException {
     log.debug("Checking out project from {} to {}", info, location);
 
     try {
