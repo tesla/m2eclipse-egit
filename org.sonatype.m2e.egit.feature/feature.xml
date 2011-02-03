@@ -11,7 +11,7 @@
       label="Maven SCM Handler for EGit"
       version="0.13.0.qualifier"
       provider-name="Sonatype, Inc."
-      plugin="org.eclipse.m2e.core">
+      plugin="org.sonatype.m2e.egit">
 
    <description url="http://m2eclipse.sonatype.org/">
       Checkout Maven projects from Git using EGit.
