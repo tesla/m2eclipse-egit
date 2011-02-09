@@ -10,16 +10,20 @@ package org.sonatype.m2e.egit.tests;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.m2e.core.project.MavenProjectScmInfo;
 import org.eclipse.m2e.core.project.ProjectImportConfiguration;
-import org.eclipse.m2e.core.wizards.MavenProjectCheckoutJob;
+import org.eclipse.m2e.scm.MavenProjectScmInfo;
+import org.eclipse.m2e.scm.internal.wizards.MavenProjectCheckoutJob;
 import org.eclipse.m2e.tests.common.AbstractMavenProjectTestCase;
 import org.eclipse.team.core.RepositoryProvider;
+import org.eclipse.ui.IWorkingSet;
 
 
+@SuppressWarnings("restriction")
 public class AbstractScmHandlerTest extends AbstractMavenProjectTestCase {
 
   protected void checkout(String... urls) throws Exception {
@@ -30,7 +34,8 @@ public class AbstractScmHandlerTest extends AbstractMavenProjectTestCase {
     }
 
     ProjectImportConfiguration importConfiguration = new ProjectImportConfiguration();
-    MavenProjectCheckoutJob job = new MavenProjectCheckoutJob(importConfiguration, true) {
+    List<IWorkingSet> workingSets = Collections.emptyList();
+    MavenProjectCheckoutJob job = new MavenProjectCheckoutJob(importConfiguration, true, workingSets) {
       @Override
       protected Collection<MavenProjectScmInfo> getProjects(IProgressMonitor monitor) {
         return scmInfos;

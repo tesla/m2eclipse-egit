@@ -16,14 +16,14 @@ import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.WizardDialog;
-import org.eclipse.m2e.core.MavenPlugin;
 import org.eclipse.m2e.core.project.ProjectImportConfiguration;
-import org.eclipse.m2e.core.wizards.MavenImportWizard;
+import org.eclipse.m2e.core.ui.internal.wizards.MavenImportWizard;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
 
 /**
@@ -67,7 +67,7 @@ public class ImportMavenProjects implements IObjectActionDelegate {
       return shell;
     }
 
-    IWorkbench workbench = MavenPlugin.getDefault().getWorkbench();
+    IWorkbench workbench = PlatformUI.getWorkbench();
     if(workbench == null) {
       return null;
     }

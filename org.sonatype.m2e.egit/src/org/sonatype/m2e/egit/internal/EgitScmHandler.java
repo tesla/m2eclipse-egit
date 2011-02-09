@@ -27,8 +27,8 @@ import org.eclipse.jgit.lib.Ref;
 import org.eclipse.jgit.storage.file.FileBasedConfig;
 import org.eclipse.jgit.storage.file.FileRepository;
 import org.eclipse.jgit.transport.URIish;
-import org.eclipse.m2e.core.project.MavenProjectScmInfo;
-import org.eclipse.m2e.core.scm.ScmHandler;
+import org.eclipse.m2e.scm.MavenProjectScmInfo;
+import org.eclipse.m2e.scm.spi.ScmHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,6 +36,7 @@ import org.slf4j.LoggerFactory;
 /**
  * A SCM handler to enable M2Eclipse to checkout using EGit.
  */
+@SuppressWarnings("restriction")
 public class EgitScmHandler extends ScmHandler {
 
   private final Logger log = LoggerFactory.getLogger(EgitScmHandler.class);
