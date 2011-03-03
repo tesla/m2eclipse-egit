@@ -24,7 +24,9 @@ import org.eclipse.ui.IWorkingSet;
 
 
 @SuppressWarnings("restriction")
-public class AbstractScmHandlerTest extends AbstractMavenProjectTestCase {
+public abstract class AbstractScmHandlerTest
+    extends AbstractMavenProjectTestCase
+{
 
   protected void checkout(String... urls) throws Exception {
     final Collection<MavenProjectScmInfo> scmInfos = new ArrayList<MavenProjectScmInfo>();
