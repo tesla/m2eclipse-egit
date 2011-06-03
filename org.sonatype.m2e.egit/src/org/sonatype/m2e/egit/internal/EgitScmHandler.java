@@ -59,7 +59,7 @@ public class EgitScmHandler extends ScmHandler {
 
       Ref ref = ls.getRemoteRef(refName);
 
-      CloneOperation clone = new CloneOperation(uri, true /* allSelected */, new ArrayList<Ref>(), location, ref,
+      CloneOperation clone = new CloneOperation(uri, true /* allSelected */, new ArrayList<Ref>(), location, ref.getName(),
           "origin", getTimeout());
       clone.run(pm.newChild(99));
 
