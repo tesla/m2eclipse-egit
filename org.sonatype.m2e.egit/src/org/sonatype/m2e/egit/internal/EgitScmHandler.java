@@ -20,7 +20,6 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.egit.core.op.CloneOperation;
-import org.eclipse.egit.core.op.ListRemoteOperation;
 import org.eclipse.jgit.lib.ConfigConstants;
 import org.eclipse.jgit.lib.Constants;
 import org.eclipse.jgit.lib.Ref;
@@ -54,12 +53,7 @@ public class EgitScmHandler extends ScmHandler {
 
       String refName = getRefName(info);
 
-      ListRemoteOperation ls = new ListRemoteOperation(new FileRepository(location), uri, getTimeout());
-      ls.run(pm.newChild(1));
-
-      Ref ref = ls.getRemoteRef(refName);
-
-      CloneOperation clone = new CloneOperation(uri, true /* allSelected */, new ArrayList<Ref>(), location, ref.getName(),
+      CloneOperation clone = new CloneOperation(uri, true /* allSelected */, new ArrayList<Ref>(), location, refName,
           "origin", getTimeout());
       clone.run(pm.newChild(99));
 
