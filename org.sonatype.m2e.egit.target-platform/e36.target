@@ -27,9 +27,9 @@
 </location>
 
 <location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
-<unit id="org.eclipse.egit.feature.group" version="1.0.0.201106021613"/>
-<unit id="org.eclipse.egit.source.feature.group" version="1.0.0.201106021613"/>
-<unit id="org.eclipse.jgit.source.feature.group" version="1.0.0.201106012028"/>
+<unit id="org.eclipse.egit.feature.group" version="1.0.0.201106031012"/>
+<unit id="org.eclipse.egit.source.feature.group" version="1.0.0.201106031012"/>
+<unit id="org.eclipse.jgit.source.feature.group" version="1.0.0.201106021718"/>
 <repository location="http://download.eclipse.org/egit/updates-nightly"/>
 </location>
 
