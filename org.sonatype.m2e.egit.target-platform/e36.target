@@ -16,8 +16,13 @@
 <unit id="org.eclipse.wst.xsd.core" version="1.1.503.v201011121919"/>
 <unit id="org.eclipse.wst.web_ui.feature.feature.group" version="3.2.3.v201102160541-7O7CFbWEMf84qYjGDyP3DNEwcgFU"/>
 <unit id="org.eclipse.equinox.p2.sdk.feature.group" version="3.6.2.R36x_v20110120-9I7VGEAG438GhnfSLuLz0FXP9NYJ"/>
-<unit id="org.slf4j.api" version="1.6.1.v20100831-0715"/>
 <repository location="http://download.eclipse.org/releases/helios"/>
+</location>
+
+<location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
+<unit id="org.slf4j.api" version="1.6.1.v20100831-0715"/>
+<unit id="ch.qos.logback.core" version="0.9.27.v20110224-1110"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository"/>
 </location>
 
 <location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
@@ -27,10 +32,10 @@
 </location>
 
 <location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
-<unit id="org.eclipse.egit.feature.group" version="1.0.0.201106031012"/>
-<unit id="org.eclipse.egit.source.feature.group" version="1.0.0.201106031012"/>
-<unit id="org.eclipse.jgit.source.feature.group" version="1.0.0.201106021718"/>
-<repository location="http://download.eclipse.org/egit/updates-nightly"/>
+<unit id="org.eclipse.egit.feature.group" version="1.0.0.201106090707-r"/>
+<unit id="org.eclipse.egit.source.feature.group" version="1.0.0.201106090707-r"/>
+<unit id="org.eclipse.jgit.source.feature.group" version="1.0.0.201106090707-r"/>
+<repository location="http://download.eclipse.org/egit/updates-1.0"/>
 </location>
 
 </locations>
