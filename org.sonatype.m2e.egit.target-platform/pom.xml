@@ -37,9 +37,9 @@
             <configuration>
               <artifacts>
                 <artifact>
-                  <file>e36.target</file>
+                  <file>e37.target</file>
                   <type>target</type>
-                  <classifier>e36</classifier>
+                  <classifier>e37</classifier>
                 </artifact>
               </artifacts>
             </configuration>
