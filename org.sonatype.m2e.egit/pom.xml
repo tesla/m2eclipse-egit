@@ -20,18 +20,4 @@
 
   <name>Maven SCM Handler for EGit Plug-in</name>
 
-  <build>
-    <sourceDirectory>src</sourceDirectory>
-
-    <resources>
-      <resource>
-        <directory>${basedir}/src</directory>
-        <includes>
-          <include>**/*.properties</include>
-        </includes>
-      </resource>
-    </resources>
-
-  </build>
-
 </project>
