@@ -46,7 +46,6 @@
         <configuration>
           <metadataRepositoryName>Maven SCM Handler for EGit</metadataRepositoryName>
           <artifactRepositoryName>Maven SCM Handler for EGit</artifactRepositoryName>
-          <compressRepository>false</compressRepository>
         </configuration>
       </plugin>
       <plugin>
