@@ -48,6 +48,7 @@
           <artifactRepositoryName>Maven SCM Handler for EGit</artifactRepositoryName>
         </configuration>
       </plugin>
+      <!--
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
@@ -66,6 +67,7 @@
           </execution>
         </executions>
       </plugin>
+      -->
     </plugins>
   </build>
 
