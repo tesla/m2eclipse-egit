@@ -17,7 +17,6 @@
 
   <artifactId>org.sonatype.m2e.egit</artifactId>
   <packaging>eclipse-plugin</packaging>
-
   <name>Maven SCM Handler for EGit Plug-in</name>
 
 </project>
