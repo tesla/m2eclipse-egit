@@ -17,7 +17,6 @@
 
   <artifactId>org.sonatype.m2e.egit.tests</artifactId>
   <packaging>eclipse-test-plugin</packaging>
-
   <name>Maven SCM Handler for EGit Plug-in Tests</name>
 
 </project>
