@@ -23,8 +23,9 @@ import org.eclipse.egit.core.op.CloneOperation;
 import org.eclipse.jgit.lib.ConfigConstants;
 import org.eclipse.jgit.lib.Constants;
 import org.eclipse.jgit.lib.Ref;
-import org.eclipse.jgit.storage.file.FileBasedConfig;
-import org.eclipse.jgit.storage.file.FileRepository;
+import org.eclipse.jgit.lib.Repository;
+import org.eclipse.jgit.lib.StoredConfig;
+import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 import org.eclipse.jgit.transport.URIish;
 import org.eclipse.m2e.scm.MavenProjectScmInfo;
 import org.eclipse.m2e.scm.spi.ScmHandler;
@@ -137,14 +138,14 @@ public class EgitScmHandler extends ScmHandler {
     // jgit does not have support for core.autocrlf but it sets the core.autocrlf=false in the local git
     // repository config (https://bugs.eclipse.org/bugs/show_bug.cgi?id=301775).
     // We need to unset it.
-    FileRepository localRepository = new FileRepository(gitDirectory);
+    Repository localRepository = new FileRepositoryBuilder().setGitDir(gitDirectory).build();
     try {
-      FileBasedConfig localConfig = localRepository.getConfig();
+      StoredConfig localConfig = localRepository.getConfig();
       localConfig.unset(ConfigConstants.CONFIG_CORE_SECTION, null, ConfigConstants.CONFIG_KEY_AUTOCRLF);
       localConfig.save();
     } finally {
       localRepository.close();
     }
   }
-
+  
 }
