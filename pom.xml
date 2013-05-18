@@ -48,6 +48,11 @@
       <url>https://repository.sonatype.org/content/sites/forge-sites/m2e/1.1.0/N/1.1.0.20120622-0806/</url>                   
       <layout>p2</layout>                                                                                                              
     </repository>      
+    <repository>                                                                                                                       
+      <id>kepler</id>                                                                                                         
+      <url>http://download.eclipse.org/releases/kepler</url>                   
+      <layout>p2</layout>                                                                                                              
+    </repository>      
   </repositories>    
   
   <build>
