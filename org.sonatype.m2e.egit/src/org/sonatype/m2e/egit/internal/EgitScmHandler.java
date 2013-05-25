@@ -24,7 +24,7 @@ import org.eclipse.jgit.lib.ConfigConstants;
 import org.eclipse.jgit.lib.Constants;
 import org.eclipse.jgit.lib.Ref;
 import org.eclipse.jgit.storage.file.FileBasedConfig;
-import org.eclipse.jgit.storage.file.FileRepository;
+import org.eclipse.jgit.internal.storage.file.FileRepository;
 import org.eclipse.jgit.transport.URIish;
 import org.eclipse.m2e.scm.MavenProjectScmInfo;
 import org.eclipse.m2e.scm.spi.ScmHandler;
