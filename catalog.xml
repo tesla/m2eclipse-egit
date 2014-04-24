@@ -16,7 +16,7 @@
       </p2>
       <overview>
         <summary>Maven SCM Handler for EGit</summary>
-        <url>https://github.com/sonatype/m2eclipse-egit</url>
+        <url>https://github.com/tesla/m2eclipse-egit</url>
       </overview>
     </catalogItem>
   </catalogItems>
