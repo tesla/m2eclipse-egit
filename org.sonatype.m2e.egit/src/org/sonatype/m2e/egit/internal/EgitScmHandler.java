@@ -123,10 +123,8 @@ public class EgitScmHandler extends ScmHandler {
     String branch = info.getBranch();
 
     if(branch == null || branch.trim().length() == 0) {
-      branch = Constants.MASTER;
-    }
-
-    if(!branch.startsWith(Constants.R_REFS)) {
+      branch = Constants.HEAD;
+    } else if(!branch.startsWith(Constants.R_REFS)) {
       branch = Constants.R_HEADS + branch;
     }
 

@@ -36,4 +36,10 @@ public class EgitScmHandlerTest extends AbstractScmHandlerTest {
     assertWorkspaceProject("git-test");
   }
 
+  public void testCheckoutNoMaster() throws Exception {
+    checkout(EgitScmHandler.GIT_SCM_ID + "file://" + new File("resources/git/nomaster").toURI().getPath());
+    waitForJobsToComplete();
+
+    assertWorkspaceProject("git-test");
+  }
 }
