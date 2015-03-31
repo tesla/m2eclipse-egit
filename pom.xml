@@ -15,9 +15,9 @@
   </prerequisites>
 
   <parent>
-    <groupId>io.tesla.tycho</groupId>
+    <groupId>io.takari.tycho</groupId>
     <artifactId>tycho-support</artifactId>
-    <version>0.0.13</version>
+    <version>0.15.0</version>
   </parent>
 
   <groupId>org.sonatype.m2e.egit</groupId>
@@ -35,6 +35,7 @@
     <module>org.sonatype.m2e.egit</module>
     <module>org.sonatype.m2e.egit.tests</module>
     <module>org.sonatype.m2e.egit.feature</module>
+    <module>org.sonatype.m2e.egit.repository</module>
   </modules>
   
 </project>
