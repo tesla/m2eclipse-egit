@@ -17,7 +17,7 @@
   <parent>
     <groupId>io.takari.tycho</groupId>
     <artifactId>tycho-support</artifactId>
-    <version>0.15.0</version>
+    <version>1.1.0</version>
   </parent>
 
   <groupId>org.sonatype.m2e.egit</groupId>
@@ -29,7 +29,7 @@
   <properties>
     <repositoryPathId>m2eclipse-egit</repositoryPathId>
     <p2MetadataName>Maven SCM Handler for EGit</p2MetadataName>
-  </properties>  
+  </properties>
 
   <modules>
     <module>org.sonatype.m2e.egit</module>
@@ -37,5 +37,5 @@
     <module>org.sonatype.m2e.egit.feature</module>
     <module>org.sonatype.m2e.egit.repository</module>
   </modules>
-  
+
 </project>
