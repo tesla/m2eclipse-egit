@@ -9,7 +9,7 @@
 <feature
       id="org.sonatype.m2e.egit.feature"
       label="Maven SCM Handler for EGit"
-      version="0.14.0.qualifier"
+      version="0.15.0.qualifier"
       provider-name="Sonatype, Inc."
       plugin="org.sonatype.m2e.egit">
 
