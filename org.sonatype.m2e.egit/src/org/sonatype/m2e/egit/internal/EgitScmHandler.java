@@ -20,14 +20,19 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.egit.core.op.CloneOperation;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jgit.lib.ConfigConstants;
 import org.eclipse.jgit.lib.Constants;
 import org.eclipse.jgit.lib.Ref;
 import org.eclipse.jgit.storage.file.FileBasedConfig;
+import org.eclipse.jgit.api.errors.TransportException;
 import org.eclipse.jgit.internal.storage.file.FileRepository;
 import org.eclipse.jgit.transport.URIish;
 import org.eclipse.m2e.scm.MavenProjectScmInfo;
 import org.eclipse.m2e.scm.spi.ScmHandler;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.ui.PlatformUI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,25 +53,41 @@ public class EgitScmHandler extends ScmHandler {
     log.debug("Checking out project from {} to {}", info, location);
 
     SubMonitor pm = SubMonitor.convert(monitor, 100);
+
     try {
-      URIish uri = getUri(info);
-
-      String refName = getRefName(info);
-
-      CloneOperation clone = new CloneOperation(uri, true /* allSelected */, new ArrayList<Ref>(), location, refName,
-          "origin", getTimeout());
-      clone.run(pm.newChild(99));
-
-      fixAutoCRLF(clone.getGitDir());
-    } catch(InvocationTargetException e) {
-      Throwable cause = e.getTargetException();
-      throw new CoreException(new Status(IStatus.ERROR, getClass().getName(), cause.getMessage(), cause));
-    } catch(IOException e) {
-      throw new CoreException(new Status(IStatus.ERROR, getClass().getName(), e.getMessage(), e));
-    } catch(URISyntaxException e) {
-      throw new CoreException(new Status(IStatus.ERROR, getClass().getName(), e.getMessage(), e));
-    } catch(InterruptedException e) {
-      // The monitor was canceled
+      boolean avoidSSH = false;
+      URIish uri = null;
+      boolean repeat = true;
+      //The cycle will run maximum twice, first time with avoidSSH = false,
+      //second, if user chooses it, with avoidSSH = true.
+      while(repeat) {
+        repeat = false;
+        try {
+          uri = getUri(info, avoidSSH);
+          String refName = getRefName(info);
+          runCloneOperation(uri, location, refName, pm);
+          //
+          break;
+        } catch(InvocationTargetException e) {
+          Throwable cause = e.getTargetException();
+          if(!avoidSSH && uri != null && "ssh".equals(uri.getScheme()) && cause instanceof TransportException) {
+            boolean accessGitAnonimously = onAuthFailed();
+            if(accessGitAnonimously) {
+              avoidSSH = true;
+              repeat = true;
+              continue;
+            } else {
+                pm.setCanceled(true);
+                break;
+            }
+          }
+          throw new CoreException(new Status(IStatus.ERROR, getClass().getName(), cause.getMessage(), cause));
+        } catch(IOException | URISyntaxException e) {
+          throw new CoreException(new Status(IStatus.ERROR, getClass().getName(), e.getMessage(), e));
+        } catch(InterruptedException e) {
+          // The monitor was canceled
+        }
+      }
     } finally {
       pm.done();
     }
@@ -76,9 +97,32 @@ public class EgitScmHandler extends ScmHandler {
     return 30;
   }
 
-  protected URIish getUri(MavenProjectScmInfo info) throws URISyntaxException {
+  protected void runCloneOperation(URIish uri, File location, String refName, SubMonitor pm)
+                  throws InvocationTargetException, IOException, InterruptedException {
+    CloneOperation clone = new CloneOperation(uri, true /* allSelected */, new ArrayList<Ref>(), location, refName,
+          "origin", getTimeout());
+    clone.run(pm.newChild(99));
+
+    fixAutoCRLF(clone.getGitDir());
+  }
+
+  protected boolean onAuthFailed() {
+    final boolean[] result = new boolean[]{false};
+    Display.getDefault().syncExec(new Runnable() {
+      @Override
+      public void run() {
+        Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
+        String title = "Authentication failed";
+        String message = "The clone URL uses the SSH protocol. It seems you do not have a valid SSH key. Do you want to continue with the GIT protocol anonymously?";
+        result[0] = MessageDialog.openConfirm(shell, title, message);
+      }
+    });
+    return result[0];
+  }
+
+  protected URIish getUri(MavenProjectScmInfo info, boolean avoidSSH) throws URISyntaxException {
     String url = info.getRepositoryUrl();
-    url = normalizeUri(url);
+    url = normalizeUri(url, avoidSSH);
 
     URIish uri = new URIish(url);
 
@@ -91,7 +135,7 @@ public class EgitScmHandler extends ScmHandler {
     return uri;
   }
 
-  protected String normalizeUri(String uri) throws URISyntaxException {
+  protected String normalizeUri(String uri, boolean avoidSSH) throws URISyntaxException {
     if(!uri.startsWith(GIT_SCM_ID)) {
       return uri;
     }
@@ -99,6 +143,27 @@ public class EgitScmHandler extends ScmHandler {
     uri = uri.substring(GIT_SCM_ID.length());
     if(uri.startsWith("file:") && !uri.startsWith("file:///")) {
       throw new URISyntaxException(uri, "Invalid git URI");
+    }
+
+    if(avoidSSH) {
+      String gitPrefix = "git://";
+      //Replace @ with ://
+      if(uri.startsWith("git@")) {
+        uri = gitPrefix + uri.substring(4);
+      }
+      //Replace ':' after host with '/' for git
+      if(uri.startsWith(gitPrefix)) {
+        int slash = uri.indexOf("/", gitPrefix.length());
+        int colon = uri.indexOf(":", gitPrefix.length());
+        if(colon > 0 && slash > colon) {
+          uri = uri.substring(0, colon) + "/" + uri.substring(colon + 1);
+        }
+      }
+    }
+    //3. Remove tail after .git
+    int dotGit = uri.indexOf(".git");
+    if(dotGit >= 0 && uri.length() > dotGit + 4) {
+      uri = uri.substring(0, dotGit + 4);
     }
 
     URIish gitUri = new URIish(uri);
