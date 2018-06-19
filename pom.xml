@@ -18,6 +18,7 @@
     <groupId>io.takari.tycho</groupId>
     <artifactId>tycho-support</artifactId>
     <version>1.1.0</version>
+    <relativePath />
   </parent>
 
   <groupId>org.sonatype.m2e.egit</groupId>
@@ -30,6 +31,7 @@
     <repositoryPathId>m2eclipse-egit</repositoryPathId>
     <p2MetadataName>Maven SCM Handler for EGit</p2MetadataName>
     <tychoVersion>0.26.0</tychoVersion>
+    <eclipse.url>http://download.eclipse.org/releases/photon</eclipse.url>
   </properties>
 
   <modules>
@@ -38,5 +40,13 @@
     <module>org.sonatype.m2e.egit.feature</module>
     <module>org.sonatype.m2e.egit.repository</module>
   </modules>
+
+  <repositories>
+    <repository>
+      <id>eclipse</id>
+      <url>${eclipse.url}</url>
+      <layout>p2</layout>
+    </repository>
+  </repositories>
 
 </project>
