@@ -13,16 +13,19 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Map;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.SubMonitor;
+import org.eclipse.egit.core.op.BranchOperation;
 import org.eclipse.egit.core.op.CloneOperation;
 import org.eclipse.jgit.lib.ConfigConstants;
 import org.eclipse.jgit.lib.Constants;
 import org.eclipse.jgit.lib.Ref;
+import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.storage.file.FileBasedConfig;
 import org.eclipse.jgit.internal.storage.file.FileRepository;
 import org.eclipse.jgit.transport.URIish;
@@ -43,11 +46,11 @@ public class EgitScmHandler extends ScmHandler {
   public static final String GIT_SCM_ID = "scm:git:";
 
   @Override
-  public void checkoutProject(MavenProjectScmInfo info, File location, IProgressMonitor monitor) throws CoreException,
+  public void checkoutProject(final MavenProjectScmInfo info, File location, IProgressMonitor monitor) throws CoreException,
       InterruptedException {
     log.debug("Checking out project from {} to {}", info, location);
 
-    SubMonitor pm = SubMonitor.convert(monitor, 100);
+    final SubMonitor pm = SubMonitor.convert(monitor, 100);
     try {
       URIish uri = getUri(info);
 
@@ -56,6 +59,29 @@ public class EgitScmHandler extends ScmHandler {
       CloneOperation clone = new CloneOperation(uri, true /* allSelected */, new ArrayList<Ref>(), location, refName,
           "origin", getTimeout());
       clone.run(pm.newChild(99));
+
+      clone.addPostCloneTask(new CloneOperation.PostCloneTask() {
+
+        public void execute(Repository repository, IProgressMonitor monitor)
+            throws CoreException {
+
+          // whenever there's a <tag>...</tag> entry in the dependency's pom
+          // we do not want to use "master" but the ref corresponding to that
+          // tag, so we checkout this ref
+          String revision = info.getRevision();
+          if (revision != null && revision.trim().length() > 0) {
+
+            Map<String, Ref> tags = repository.getTags();
+            Ref ref = tags.get(info.getRevision());
+
+            BranchOperation branch = new BranchOperation(repository, ref
+                .getName());
+            branch.execute(pm.newChild(99));
+          }
+        }
+      });
+
+      clone.run(pm.newChild(50));
 
       fixAutoCRLF(clone.getGitDir());
     } catch(InvocationTargetException e) {
