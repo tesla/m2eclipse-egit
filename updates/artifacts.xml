@@ -2,7 +2,7 @@
 <?artifactRepository version='1.1.0'?>
 <repository name='Maven SCM Handler for EGit Repository' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1639345544277'/>
+    <property name='p2.timestamp' value='1639346888483'/>
     <property name='publishPackFilesAsSiblings' value='true'/>
   </properties>
   <mappings size='5'>
@@ -13,7 +13,19 @@
     <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
   </mappings>
   <artifacts size='2'>
-    <artifact classifier='org.eclipse.update.feature' id='org.sonatype.m2e.egit.feature' version='0.16.0.202112122140'>
+    <artifact classifier='osgi.bundle' id='org.sonatype.m2e.egit' version='0.16.0.202112122205'>
+      <properties size='8'>
+        <property name='artifact.size' value='12312'/>
+        <property name='download.size' value='12312'/>
+        <property name='maven-groupId' value='org.sonatype.m2e.egit'/>
+        <property name='maven-artifactId' value='org.sonatype.m2e.egit'/>
+        <property name='maven-version' value='0.16.0-SNAPSHOT'/>
+        <property name='download.md5' value='2e0584f409f19aa43fcb8a1688ca3648'/>
+        <property name='download.checksum.md5' value='2e0584f409f19aa43fcb8a1688ca3648'/>
+        <property name='download.checksum.sha-256' value='e1a758efdc5d289e394b195c36af94d637e3124cb889931246a260991155e0fb'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.sonatype.m2e.egit.feature' version='0.16.0.202112122205'>
       <properties size='9'>
         <property name='artifact.size' value='10544'/>
         <property name='download.size' value='10544'/>
@@ -21,21 +33,9 @@
         <property name='maven-artifactId' value='org.sonatype.m2e.egit.feature'/>
         <property name='maven-version' value='0.16.0-SNAPSHOT'/>
         <property name='download.contentType' value='application/zip'/>
-        <property name='download.md5' value='3c4117356368b08f5e9195e004bd82f9'/>
-        <property name='download.checksum.md5' value='3c4117356368b08f5e9195e004bd82f9'/>
-        <property name='download.checksum.sha-256' value='24c407128802bd89f2a40bc3eee04dc92f5aa20a287a7788a98d4bb0a66317ff'/>
-      </properties>
-    </artifact>
-    <artifact classifier='osgi.bundle' id='org.sonatype.m2e.egit' version='0.16.0.202112122140'>
-      <properties size='8'>
-        <property name='artifact.size' value='12312'/>
-        <property name='download.size' value='12312'/>
-        <property name='maven-groupId' value='org.sonatype.m2e.egit'/>
-        <property name='maven-artifactId' value='org.sonatype.m2e.egit'/>
-        <property name='maven-version' value='0.16.0-SNAPSHOT'/>
-        <property name='download.md5' value='58c49982597d3866bc25dedaf4310b97'/>
-        <property name='download.checksum.md5' value='58c49982597d3866bc25dedaf4310b97'/>
-        <property name='download.checksum.sha-256' value='d1cb85be09cb72904cc79ecd48efe4396a9f9ec2274eadf2a9595beef171868f'/>
+        <property name='download.md5' value='a3ce6a8ddabf1191e344042ba5594b98'/>
+        <property name='download.checksum.md5' value='a3ce6a8ddabf1191e344042ba5594b98'/>
+        <property name='download.checksum.sha-256' value='337a77a36d7a1f9f5fafa8a55d8cbd96157f7f9e77a88d8ae3236717f7811cce'/>
       </properties>
     </artifact>
   </artifacts>
