@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Copyright (c) 2010-2011 Sonatype, Inc.
+  Copyright (c) 2010-2021 Sonatype, Inc. and others.
   All rights reserved. This program and the accompanying materials
   are made available under the terms of the Eclipse Public License v1.0
   which accompanies this distribution, and is available at
@@ -10,30 +10,81 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <prerequisites>
-    <maven>3.0</maven>
-  </prerequisites>
-
-  <parent>
-    <groupId>io.takari.tycho</groupId>
-    <artifactId>tycho-support</artifactId>
-    <version>1.1.0</version>
-    <relativePath />
-  </parent>
-
   <groupId>org.sonatype.m2e.egit</groupId>
   <artifactId>org.sonatype.m2e.egit.parent</artifactId>
-  <version>0.15.1-SNAPSHOT</version>
+  <version>0.16.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Maven SCM Handler for EGit Parent</name>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <repositoryPathId>m2eclipse-egit</repositoryPathId>
     <p2MetadataName>Maven SCM Handler for EGit</p2MetadataName>
-    <tychoVersion>0.26.0</tychoVersion>
-    <eclipse.url>http://download.eclipse.org/releases/photon</eclipse.url>
+    <tychoVersion>2.5.0</tychoVersion>
+    <eclipse.url>https://download.eclipse.org/releases/2021-12</eclipse.url>
+    <tycho.test.jvmArgs>-Xmx512m</tycho.test.jvmArgs>
   </properties>
 
+<build>
+  <plugins>
+    <!-- These plugins are required for all Tycho-based builds -->
+    <plugin>
+      <groupId>org.eclipse.tycho</groupId>
+      <artifactId>tycho-maven-plugin</artifactId>
+      <version>${tychoVersion}</version>
+      <extensions>true</extensions>
+    </plugin>
+    <plugin>
+      <groupId>org.eclipse.tycho</groupId>
+      <artifactId>target-platform-configuration</artifactId>
+      <version>${tychoVersion}</version>
+      <?m2e ignore?>
+      <configuration>
+        <resolver>p2</resolver>
+        <pomDependencies>consider</pomDependencies>
+      </configuration>
+    </plugin>
+  </plugins>
+  <pluginManagement>
+    <plugins>
+      <!-- Important for M2E self-hosting -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.6</version>
+      </plugin>
+      <!-- Testing -->
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-surefire-plugin</artifactId>
+        <version>${tychoVersion}</version>
+        <configuration>
+          <useUIHarness>true</useUIHarness>
+          <includes>
+            <include>**/*Test.java</include>
+          </includes>
+          <!--
+          We need to share these test resources across projects easily
+          <argLine>${tycho.test.jvmArgs} -Djava.io.tmpdir=${project.build.directory}/work</argLine>
+          <appArgLine>-eclipse.keyring target/keyring -eclipse.password resources/secure-storage-password.txt -pluginCustomization ${basedir}/plugin_customization.ini</appArgLine>
+          -->
+          <argLine>${tycho.test.jvmArgs}</argLine>
+          <forkedProcessTimeoutInSeconds>600</forkedProcessTimeoutInSeconds>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-p2-repository-plugin</artifactId>
+        <version>${tychoVersion}</version>
+        <configuration>
+          <compress>false</compress>
+        </configuration>
+      </plugin>
+    </plugins>
+  </pluginManagement>
+</build>
+
+  
   <modules>
     <module>org.sonatype.m2e.egit</module>
     <module>org.sonatype.m2e.egit.tests</module>
@@ -49,4 +100,37 @@
     </repository>
   </repositories>
 
+  <profiles>
+    <profile>
+      <id>osx</id>
+      <activation>
+        <os>
+          <family>mac</family>
+        </os>
+      </activation>
+      <properties>
+        <tycho.test.jvmArgs>-Xmx512m -XstartOnFirstThread</tycho.test.jvmArgs>
+      </properties>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.eclipse.tycho</groupId>
+              <artifactId>tycho-surefire-plugin</artifactId>
+              <configuration>
+                <dependencies>
+                  <dependency>
+                    <artifactId>org.eclipse.jdt.launching.macosx</artifactId>
+                    <version>0.0.0</version>
+                    <type>eclipse-plugin</type>
+                  </dependency>
+                </dependencies>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+
+  </profiles>
 </project>

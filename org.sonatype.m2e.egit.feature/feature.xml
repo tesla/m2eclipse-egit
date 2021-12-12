@@ -9,11 +9,11 @@
 <feature
       id="org.sonatype.m2e.egit.feature"
       label="Maven SCM Handler for EGit"
-      version="0.15.1.qualifier"
-      provider-name="Sonatype, Inc."
+      version="0.16.0.qualifier"
+      provider-name="Takari, Inc."
       plugin="org.sonatype.m2e.egit">
 
-   <description url="http://m2eclipse.sonatype.org/">
+   <description url="https://m2eclipse.sonatype.org/">
       Checkout Maven projects from Git using EGit.
    </description>
 
@@ -26,7 +26,7 @@
    </license>
 
    <url>
-      <update label="Maven Integration Extras" url="http://m2eclipse.sonatype.org/sites/m2e-extras/"/>
+      <update label="Maven Integration Extras" url="https://m2eclipse.sonatype.org/sites/m2e-extras/"/>
    </url>
 
    <requires>

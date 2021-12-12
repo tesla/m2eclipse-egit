@@ -11,6 +11,7 @@ package org.sonatype.m2e.egit.tests;
 import java.io.File;
 
 import org.eclipse.ui.PlatformUI;
+import org.junit.Test;
 import org.sonatype.m2e.egit.internal.EgitScmHandler;
 
 
@@ -21,7 +22,7 @@ import org.sonatype.m2e.egit.internal.EgitScmHandler;
 public class EgitScmHandlerTest extends AbstractScmHandlerTest {
 
   @Override
-  protected void setUp() throws Exception {
+  public void setUp() throws Exception {
     super.setUp();
 
     // NOTE: The EGit resource decorator opens pack files which interferes with the workspace cleanup
@@ -29,6 +30,7 @@ public class EgitScmHandlerTest extends AbstractScmHandlerTest {
         .setEnabled("org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator", false);
   }
 
+  @Test
   public void testCheckout() throws Exception {
     checkout(EgitScmHandler.GIT_SCM_ID + "file://" + new File("resources/git/simple").toURI().getPath());
     waitForJobsToComplete();
@@ -36,6 +38,7 @@ public class EgitScmHandlerTest extends AbstractScmHandlerTest {
     assertWorkspaceProject("git-test");
   }
 
+  @Test
   public void testCheckoutNoMaster() throws Exception {
     checkout(EgitScmHandler.GIT_SCM_ID + "file://" + new File("resources/git/nomaster").toURI().getPath());
     waitForJobsToComplete();
