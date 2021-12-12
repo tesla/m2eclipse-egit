@@ -1,0 +1,956 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository version='1.2.0'?>
+<repository name='Maven SCM Handler for EGit Repository' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+  <properties size='1'>
+    <property name='p2.timestamp' value='1639345544268'/>
+  </properties>
+  <units size='7'>
+    <unit id='org.sonatype.m2e.egit' version='0.16.0.202112122140' generation='2'>
+      <update id='org.sonatype.m2e.egit' range='[0.0.0,0.16.0.202112122140)' severity='0'/>
+      <properties size='7'>
+        <property name='df_LT.Bundle-Name' value='Maven SCM Handler for EGit'/>
+        <property name='df_LT.Bundle-Vendor' value='Sonatype, Inc.'/>
+        <property name='org.eclipse.equinox.p2.name' value='%Bundle-Name'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%Bundle-Vendor'/>
+        <property name='maven-groupId' value='org.sonatype.m2e.egit'/>
+        <property name='maven-artifactId' value='org.sonatype.m2e.egit'/>
+        <property name='maven-version' value='0.16.0-SNAPSHOT'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.sonatype.m2e.egit' version='0.16.0.202112122140'/>
+        <provided namespace='osgi.bundle' name='org.sonatype.m2e.egit' version='0.16.0.202112122140'/>
+        <provided namespace='java.package' name='org.sonatype.m2e.egit.internal' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='org.sonatype.m2e.egit' version='0.16.0.202112122140'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='12'>
+        <required namespace='osgi.bundle' name='org.eclipse.m2e.core' range='[1.0.0,2.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.m2e.scm' range='[1.0.0,2.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.m2e.core.ui' range='[1.0.0,2.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.swt' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.egit.core' range='[3.0.0,8.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.egit.ui' range='[3.0.0,8.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jgit' range='[3.0.0,8.0.0)'/>
+        <required namespace='java.package' name='org.slf4j' range='1.5.11'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=11))'>
+          <description>
+            org.sonatype.m2e.egit
+          </description>
+        </requiredProperties>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.sonatype.m2e.egit' version='0.16.0.202112122140'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.sonatype.m2e.egit;singleton:=true&#xA;Bundle-Version: 0.16.0.202112122140
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.sonatype.m2e.egit.feature.feature.group' version='0.16.0.202112122140' singleton='false'>
+      <update id='org.sonatype.m2e.egit.feature.feature.group' range='[0.0.0,0.16.0.202112122140)' severity='0'/>
+      <properties size='10'>
+        <property name='org.eclipse.equinox.p2.name' value='Maven SCM Handler for EGit'/>
+        <property name='org.eclipse.equinox.p2.description' value='Checkout Maven projects from Git using EGit.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://m2eclipse.sonatype.org/'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Takari, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+        <property name='maven-groupId' value='org.sonatype.m2e.egit'/>
+        <property name='maven-artifactId' value='org.sonatype.m2e.egit.feature'/>
+        <property name='maven-version' value='0.16.0-SNAPSHOT'/>
+        <property name='df_LT.license' value='Eclipse Public License - v 1.0&#xA;&#xA;THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE&#xA;PUBLIC LICENSE (&quot;AGREEMENT&quot;). ANY USE, REPRODUCTION OR DISTRIBUTION OF&#xA;THE PROGRAM CONSTITUTES RECIPIENT&apos;S ACCEPTANCE OF THIS AGREEMENT.&#xA;&#xA;*1. DEFINITIONS*&#xA;&#xA;&quot;Contribution&quot; means:&#xA;&#xA;a) in the case of the initial Contributor, the initial code and&#xA;documentation distributed under this Agreement, and&#xA;&#xA;b) in the case of each subsequent Contributor:&#xA;&#xA;i) changes to the Program, and&#xA;&#xA;ii) additions to the Program;&#xA;&#xA;where such changes and/or additions to the Program originate from and&#xA;are distributed by that particular Contributor. A Contribution&#xA;&apos;originates&apos; from a Contributor if it was added to the Program by such&#xA;Contributor itself or anyone acting on such Contributor&apos;s behalf.&#xA;Contributions do not include additions to the Program which: (i) are&#xA;separate modules of software distributed in conjunction with the Program&#xA;under their own license agreement, and (ii) are not derivative works of&#xA;the Program.&#xA;&#xA;&quot;Contributor&quot; means any person or entity that distributes the Program.&#xA;&#xA;&quot;Licensed Patents&quot; mean patent claims licensable by a Contributor which&#xA;are necessarily infringed by the use or sale of its Contribution alone&#xA;or when combined with the Program.&#xA;&#xA;&quot;Program&quot; means the Contributions distributed in accordance with this&#xA;Agreement.&#xA;&#xA;&quot;Recipient&quot; means anyone who receives the Program under this Agreement,&#xA;including all Contributors.&#xA;&#xA;*2. GRANT OF RIGHTS*&#xA;&#xA;a) Subject to the terms of this Agreement, each Contributor hereby&#xA;grants Recipient a non-exclusive, worldwide, royalty-free copyright&#xA;license to reproduce, prepare derivative works of, publicly display,&#xA;publicly perform, distribute and sublicense the Contribution of such&#xA;Contributor, if any, and such derivative works, in source code and&#xA;object code form.&#xA;&#xA;b) Subject to the terms of this Agreement, each Contributor hereby&#xA;grants Recipient a non-exclusive, worldwide, royalty-free patent license&#xA;under Licensed Patents to make, use, sell, offer to sell, import and&#xA;otherwise transfer the Contribution of such Contributor, if any, in&#xA;source code and object code form. This patent license shall apply to the&#xA;combination of the Contribution and the Program if, at the time the&#xA;Contribution is added by the Contributor, such addition of the&#xA;Contribution causes such combination to be covered by the Licensed&#xA;Patents. The patent license shall not apply to any other combinations&#xA;which include the Contribution. No hardware per se is licensed hereunder.&#xA;&#xA;c) Recipient understands that although each Contributor grants the&#xA;licenses to its Contributions set forth herein, no assurances are&#xA;provided by any Contributor that the Program does not infringe the&#xA;patent or other intellectual property rights of any other entity. Each&#xA;Contributor disclaims any liability to Recipient for claims brought by&#xA;any other entity based on infringement of intellectual property rights&#xA;or otherwise. As a condition to exercising the rights and licenses&#xA;granted hereunder, each Recipient hereby assumes sole responsibility to&#xA;secure any other intellectual property rights needed, if any. For&#xA;example, if a third party patent license is required to allow Recipient&#xA;to distribute the Program, it is Recipient&apos;s responsibility to acquire&#xA;that license before distributing the Program.&#xA;&#xA;d) Each Contributor represents that to its knowledge it has sufficient&#xA;copyright rights in its Contribution, if any, to grant the copyright&#xA;license set forth in this Agreement.&#xA;&#xA;*3. REQUIREMENTS*&#xA;&#xA;A Contributor may choose to distribute the Program in object code form&#xA;under its own license agreement, provided that:&#xA;&#xA;a) it complies with the terms and conditions of this Agreement; and&#xA;&#xA;b) its license agreement:&#xA;&#xA;i) effectively disclaims on behalf of all Contributors all warranties&#xA;and conditions, express and implied, including warranties or conditions&#xA;of title and non-infringement, and implied warranties or conditions of&#xA;merchantability and fitness for a particular purpose;&#xA;&#xA;ii) effectively excludes on behalf of all Contributors all liability for&#xA;damages, including direct, indirect, special, incidental and&#xA;consequential damages, such as lost profits;&#xA;&#xA;iii) states that any provisions which differ from this Agreement are&#xA;offered by that Contributor alone and not by any other party; and&#xA;&#xA;iv) states that source code for the Program is available from such&#xA;Contributor, and informs licensees how to obtain it in a reasonable&#xA;manner on or through a medium customarily used for software exchange.&#xA;&#xA;When the Program is made available in source code form:&#xA;&#xA;a) it must be made available under this Agreement; and&#xA;&#xA;b) a copy of this Agreement must be included with each copy of the Program.&#xA;&#xA;Contributors may not remove or alter any copyright notices contained&#xA;within the Program.&#xA;&#xA;Each Contributor must identify itself as the originator of its&#xA;Contribution, if any, in a manner that reasonably allows subsequent&#xA;Recipients to identify the originator of the Contribution.&#xA;&#xA;*4. COMMERCIAL DISTRIBUTION*&#xA;&#xA;Commercial distributors of software may accept certain responsibilities&#xA;with respect to end users, business partners and the like. While this&#xA;license is intended to facilitate the commercial use of the Program, the&#xA;Contributor who includes the Program in a commercial product offering&#xA;should do so in a manner which does not create potential liability for&#xA;other Contributors. Therefore, if a Contributor includes the Program in&#xA;a commercial product offering, such Contributor (&quot;Commercial&#xA;Contributor&quot;) hereby agrees to defend and indemnify every other&#xA;Contributor (&quot;Indemnified Contributor&quot;) against any losses, damages and&#xA;costs (collectively &quot;Losses&quot;) arising from claims, lawsuits and other&#xA;legal actions brought by a third party against the Indemnified&#xA;Contributor to the extent caused by the acts or omissions of such&#xA;Commercial Contributor in connection with its distribution of the&#xA;Program in a commercial product offering. The obligations in this&#xA;section do not apply to any claims or Losses relating to any actual or&#xA;alleged intellectual property infringement. In order to qualify, an&#xA;Indemnified Contributor must: a) promptly notify the Commercial&#xA;Contributor in writing of such claim, and b) allow the Commercial&#xA;Contributor to control, and cooperate with the Commercial Contributor&#xA;in, the defense and any related settlement negotiations. The Indemnified&#xA;Contributor may participate in any such claim at its own expense.&#xA;&#xA;For example, a Contributor might include the Program in a commercial&#xA;product offering, Product X. That Contributor is then a Commercial&#xA;Contributor. If that Commercial Contributor then makes performance&#xA;claims, or offers warranties related to Product X, those performance&#xA;claims and warranties are such Commercial Contributor&apos;s responsibility&#xA;alone. Under this section, the Commercial Contributor would have to&#xA;defend claims against the other Contributors related to those&#xA;performance claims and warranties, and if a court requires any other&#xA;Contributor to pay any damages as a result, the Commercial Contributor&#xA;must pay those damages.&#xA;&#xA;*5. NO WARRANTY*&#xA;&#xA;EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS PROVIDED&#xA;ON AN &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,&#xA;EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES&#xA;OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR&#xA;A PARTICULAR PURPOSE. Each Recipient is solely responsible for&#xA;determining the appropriateness of using and distributing the Program&#xA;and assumes all risks associated with its exercise of rights under this&#xA;Agreement , including but not limited to the risks and costs of program&#xA;errors, compliance with applicable laws, damage to or loss of data,&#xA;programs or equipment, and unavailability or interruption of operations.&#xA;&#xA;*6. DISCLAIMER OF LIABILITY*&#xA;&#xA;EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT NOR&#xA;ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT, INDIRECT,&#xA;INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING&#xA;WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED AND ON ANY THEORY OF&#xA;LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING&#xA;NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OR&#xA;DISTRIBUTION OF THE PROGRAM OR THE EXERCISE OF ANY RIGHTS GRANTED&#xA;HEREUNDER, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.&#xA;&#xA;*7. GENERAL*&#xA;&#xA;If any provision of this Agreement is invalid or unenforceable under&#xA;applicable law, it shall not affect the validity or enforceability of&#xA;the remainder of the terms of this Agreement, and without further action&#xA;by the parties hereto, such provision shall be reformed to the minimum&#xA;extent necessary to make such provision valid and enforceable.&#xA;&#xA;If Recipient institutes patent litigation against any entity (including&#xA;a cross-claim or counterclaim in a lawsuit) alleging that the Program&#xA;itself (excluding combinations of the Program with other software or&#xA;hardware) infringes such Recipient&apos;s patent(s), then such Recipient&apos;s&#xA;rights granted under Section 2(b) shall terminate as of the date such&#xA;litigation is filed.&#xA;&#xA;All Recipient&apos;s rights under this Agreement shall terminate if it fails&#xA;to comply with any of the material terms or conditions of this Agreement&#xA;and does not cure such failure in a reasonable period of time after&#xA;becoming aware of such noncompliance. If all Recipient&apos;s rights under&#xA;this Agreement terminate, Recipient agrees to cease use and distribution&#xA;of the Program as soon as reasonably practicable. However, Recipient&apos;s&#xA;obligations under this Agreement and any licenses granted by Recipient&#xA;relating to the Program shall continue and survive.&#xA;&#xA;Everyone is permitted to copy and distribute copies of this Agreement,&#xA;but in order to avoid inconsistency the Agreement is copyrighted and may&#xA;only be modified in the following manner. The Agreement Steward reserves&#xA;the right to publish new versions (including revisions) of this&#xA;Agreement from time to time. No one other than the Agreement Steward has&#xA;the right to modify this Agreement. The Eclipse Foundation is the&#xA;initial Agreement Steward. The Eclipse Foundation may assign the&#xA;responsibility to serve as the Agreement Steward to a suitable separate&#xA;entity. Each new version of the Agreement will be given a distinguishing&#xA;version number. The Program (including Contributions) may always be&#xA;distributed subject to the version of the Agreement under which it was&#xA;received. In addition, after a new version of the Agreement is&#xA;published, Contributor may elect to distribute the Program (including&#xA;its Contributions) under the new version. Except as expressly stated in&#xA;Sections 2(a) and 2(b) above, Recipient receives no rights or licenses&#xA;to the intellectual property of any Contributor under this Agreement,&#xA;whether expressly, by implication, estoppel or otherwise. All rights in&#xA;the Program not expressly granted under this Agreement are reserved.&#xA;&#xA;This Agreement is governed by the laws of the State of New York and the&#xA;intellectual property laws of the United States of America. No party to&#xA;this Agreement will bring a legal action under this Agreement more than&#xA;one year after the cause of action arose. Each party waives its rights&#xA;to a jury trial in any resulting litigation.'/>
+        <property name='df_LT.copyright' value='Copyright (c) 2008-2021 Sonatype, Inc.&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;Contributors:&#xA;Sonatype, Inc. - initial API and implementation'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.sonatype.m2e.egit.feature.feature.group' version='0.16.0.202112122140'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='6'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.platform.feature.group' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.m2e.feature.feature.group' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.egit.feature.group' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jgit.feature.group' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.sonatype.m2e.egit' range='[0.16.0.202112122140,0.16.0.202112122140]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.sonatype.m2e.egit.feature.feature.jar' range='[0.16.0.202112122140,0.16.0.202112122140]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='%25licenseURL' url='%25licenseURL'>
+          %license
+        </license>
+      </licenses>
+      <copyright>
+        %copyright
+      </copyright>
+    </unit>
+    <unit id='org.sonatype.m2e.egit.feature.feature.jar' version='0.16.0.202112122140'>
+      <properties size='10'>
+        <property name='org.eclipse.equinox.p2.name' value='Maven SCM Handler for EGit'/>
+        <property name='org.eclipse.equinox.p2.description' value='Checkout Maven projects from Git using EGit.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://m2eclipse.sonatype.org/'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Takari, Inc.'/>
+        <property name='org.eclipse.update.feature.plugin' value='org.sonatype.m2e.egit'/>
+        <property name='df_LT.license' value='Eclipse Public License - v 1.0&#xA;&#xA;THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE&#xA;PUBLIC LICENSE (&quot;AGREEMENT&quot;). ANY USE, REPRODUCTION OR DISTRIBUTION OF&#xA;THE PROGRAM CONSTITUTES RECIPIENT&apos;S ACCEPTANCE OF THIS AGREEMENT.&#xA;&#xA;*1. DEFINITIONS*&#xA;&#xA;&quot;Contribution&quot; means:&#xA;&#xA;a) in the case of the initial Contributor, the initial code and&#xA;documentation distributed under this Agreement, and&#xA;&#xA;b) in the case of each subsequent Contributor:&#xA;&#xA;i) changes to the Program, and&#xA;&#xA;ii) additions to the Program;&#xA;&#xA;where such changes and/or additions to the Program originate from and&#xA;are distributed by that particular Contributor. A Contribution&#xA;&apos;originates&apos; from a Contributor if it was added to the Program by such&#xA;Contributor itself or anyone acting on such Contributor&apos;s behalf.&#xA;Contributions do not include additions to the Program which: (i) are&#xA;separate modules of software distributed in conjunction with the Program&#xA;under their own license agreement, and (ii) are not derivative works of&#xA;the Program.&#xA;&#xA;&quot;Contributor&quot; means any person or entity that distributes the Program.&#xA;&#xA;&quot;Licensed Patents&quot; mean patent claims licensable by a Contributor which&#xA;are necessarily infringed by the use or sale of its Contribution alone&#xA;or when combined with the Program.&#xA;&#xA;&quot;Program&quot; means the Contributions distributed in accordance with this&#xA;Agreement.&#xA;&#xA;&quot;Recipient&quot; means anyone who receives the Program under this Agreement,&#xA;including all Contributors.&#xA;&#xA;*2. GRANT OF RIGHTS*&#xA;&#xA;a) Subject to the terms of this Agreement, each Contributor hereby&#xA;grants Recipient a non-exclusive, worldwide, royalty-free copyright&#xA;license to reproduce, prepare derivative works of, publicly display,&#xA;publicly perform, distribute and sublicense the Contribution of such&#xA;Contributor, if any, and such derivative works, in source code and&#xA;object code form.&#xA;&#xA;b) Subject to the terms of this Agreement, each Contributor hereby&#xA;grants Recipient a non-exclusive, worldwide, royalty-free patent license&#xA;under Licensed Patents to make, use, sell, offer to sell, import and&#xA;otherwise transfer the Contribution of such Contributor, if any, in&#xA;source code and object code form. This patent license shall apply to the&#xA;combination of the Contribution and the Program if, at the time the&#xA;Contribution is added by the Contributor, such addition of the&#xA;Contribution causes such combination to be covered by the Licensed&#xA;Patents. The patent license shall not apply to any other combinations&#xA;which include the Contribution. No hardware per se is licensed hereunder.&#xA;&#xA;c) Recipient understands that although each Contributor grants the&#xA;licenses to its Contributions set forth herein, no assurances are&#xA;provided by any Contributor that the Program does not infringe the&#xA;patent or other intellectual property rights of any other entity. Each&#xA;Contributor disclaims any liability to Recipient for claims brought by&#xA;any other entity based on infringement of intellectual property rights&#xA;or otherwise. As a condition to exercising the rights and licenses&#xA;granted hereunder, each Recipient hereby assumes sole responsibility to&#xA;secure any other intellectual property rights needed, if any. For&#xA;example, if a third party patent license is required to allow Recipient&#xA;to distribute the Program, it is Recipient&apos;s responsibility to acquire&#xA;that license before distributing the Program.&#xA;&#xA;d) Each Contributor represents that to its knowledge it has sufficient&#xA;copyright rights in its Contribution, if any, to grant the copyright&#xA;license set forth in this Agreement.&#xA;&#xA;*3. REQUIREMENTS*&#xA;&#xA;A Contributor may choose to distribute the Program in object code form&#xA;under its own license agreement, provided that:&#xA;&#xA;a) it complies with the terms and conditions of this Agreement; and&#xA;&#xA;b) its license agreement:&#xA;&#xA;i) effectively disclaims on behalf of all Contributors all warranties&#xA;and conditions, express and implied, including warranties or conditions&#xA;of title and non-infringement, and implied warranties or conditions of&#xA;merchantability and fitness for a particular purpose;&#xA;&#xA;ii) effectively excludes on behalf of all Contributors all liability for&#xA;damages, including direct, indirect, special, incidental and&#xA;consequential damages, such as lost profits;&#xA;&#xA;iii) states that any provisions which differ from this Agreement are&#xA;offered by that Contributor alone and not by any other party; and&#xA;&#xA;iv) states that source code for the Program is available from such&#xA;Contributor, and informs licensees how to obtain it in a reasonable&#xA;manner on or through a medium customarily used for software exchange.&#xA;&#xA;When the Program is made available in source code form:&#xA;&#xA;a) it must be made available under this Agreement; and&#xA;&#xA;b) a copy of this Agreement must be included with each copy of the Program.&#xA;&#xA;Contributors may not remove or alter any copyright notices contained&#xA;within the Program.&#xA;&#xA;Each Contributor must identify itself as the originator of its&#xA;Contribution, if any, in a manner that reasonably allows subsequent&#xA;Recipients to identify the originator of the Contribution.&#xA;&#xA;*4. COMMERCIAL DISTRIBUTION*&#xA;&#xA;Commercial distributors of software may accept certain responsibilities&#xA;with respect to end users, business partners and the like. While this&#xA;license is intended to facilitate the commercial use of the Program, the&#xA;Contributor who includes the Program in a commercial product offering&#xA;should do so in a manner which does not create potential liability for&#xA;other Contributors. Therefore, if a Contributor includes the Program in&#xA;a commercial product offering, such Contributor (&quot;Commercial&#xA;Contributor&quot;) hereby agrees to defend and indemnify every other&#xA;Contributor (&quot;Indemnified Contributor&quot;) against any losses, damages and&#xA;costs (collectively &quot;Losses&quot;) arising from claims, lawsuits and other&#xA;legal actions brought by a third party against the Indemnified&#xA;Contributor to the extent caused by the acts or omissions of such&#xA;Commercial Contributor in connection with its distribution of the&#xA;Program in a commercial product offering. The obligations in this&#xA;section do not apply to any claims or Losses relating to any actual or&#xA;alleged intellectual property infringement. In order to qualify, an&#xA;Indemnified Contributor must: a) promptly notify the Commercial&#xA;Contributor in writing of such claim, and b) allow the Commercial&#xA;Contributor to control, and cooperate with the Commercial Contributor&#xA;in, the defense and any related settlement negotiations. The Indemnified&#xA;Contributor may participate in any such claim at its own expense.&#xA;&#xA;For example, a Contributor might include the Program in a commercial&#xA;product offering, Product X. That Contributor is then a Commercial&#xA;Contributor. If that Commercial Contributor then makes performance&#xA;claims, or offers warranties related to Product X, those performance&#xA;claims and warranties are such Commercial Contributor&apos;s responsibility&#xA;alone. Under this section, the Commercial Contributor would have to&#xA;defend claims against the other Contributors related to those&#xA;performance claims and warranties, and if a court requires any other&#xA;Contributor to pay any damages as a result, the Commercial Contributor&#xA;must pay those damages.&#xA;&#xA;*5. NO WARRANTY*&#xA;&#xA;EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS PROVIDED&#xA;ON AN &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,&#xA;EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES&#xA;OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR&#xA;A PARTICULAR PURPOSE. Each Recipient is solely responsible for&#xA;determining the appropriateness of using and distributing the Program&#xA;and assumes all risks associated with its exercise of rights under this&#xA;Agreement , including but not limited to the risks and costs of program&#xA;errors, compliance with applicable laws, damage to or loss of data,&#xA;programs or equipment, and unavailability or interruption of operations.&#xA;&#xA;*6. DISCLAIMER OF LIABILITY*&#xA;&#xA;EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT NOR&#xA;ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT, INDIRECT,&#xA;INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING&#xA;WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED AND ON ANY THEORY OF&#xA;LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING&#xA;NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OR&#xA;DISTRIBUTION OF THE PROGRAM OR THE EXERCISE OF ANY RIGHTS GRANTED&#xA;HEREUNDER, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.&#xA;&#xA;*7. GENERAL*&#xA;&#xA;If any provision of this Agreement is invalid or unenforceable under&#xA;applicable law, it shall not affect the validity or enforceability of&#xA;the remainder of the terms of this Agreement, and without further action&#xA;by the parties hereto, such provision shall be reformed to the minimum&#xA;extent necessary to make such provision valid and enforceable.&#xA;&#xA;If Recipient institutes patent litigation against any entity (including&#xA;a cross-claim or counterclaim in a lawsuit) alleging that the Program&#xA;itself (excluding combinations of the Program with other software or&#xA;hardware) infringes such Recipient&apos;s patent(s), then such Recipient&apos;s&#xA;rights granted under Section 2(b) shall terminate as of the date such&#xA;litigation is filed.&#xA;&#xA;All Recipient&apos;s rights under this Agreement shall terminate if it fails&#xA;to comply with any of the material terms or conditions of this Agreement&#xA;and does not cure such failure in a reasonable period of time after&#xA;becoming aware of such noncompliance. If all Recipient&apos;s rights under&#xA;this Agreement terminate, Recipient agrees to cease use and distribution&#xA;of the Program as soon as reasonably practicable. However, Recipient&apos;s&#xA;obligations under this Agreement and any licenses granted by Recipient&#xA;relating to the Program shall continue and survive.&#xA;&#xA;Everyone is permitted to copy and distribute copies of this Agreement,&#xA;but in order to avoid inconsistency the Agreement is copyrighted and may&#xA;only be modified in the following manner. The Agreement Steward reserves&#xA;the right to publish new versions (including revisions) of this&#xA;Agreement from time to time. No one other than the Agreement Steward has&#xA;the right to modify this Agreement. The Eclipse Foundation is the&#xA;initial Agreement Steward. The Eclipse Foundation may assign the&#xA;responsibility to serve as the Agreement Steward to a suitable separate&#xA;entity. Each new version of the Agreement will be given a distinguishing&#xA;version number. The Program (including Contributions) may always be&#xA;distributed subject to the version of the Agreement under which it was&#xA;received. In addition, after a new version of the Agreement is&#xA;published, Contributor may elect to distribute the Program (including&#xA;its Contributions) under the new version. Except as expressly stated in&#xA;Sections 2(a) and 2(b) above, Recipient receives no rights or licenses&#xA;to the intellectual property of any Contributor under this Agreement,&#xA;whether expressly, by implication, estoppel or otherwise. All rights in&#xA;the Program not expressly granted under this Agreement are reserved.&#xA;&#xA;This Agreement is governed by the laws of the State of New York and the&#xA;intellectual property laws of the United States of America. No party to&#xA;this Agreement will bring a legal action under this Agreement more than&#xA;one year after the cause of action arose. Each party waives its rights&#xA;to a jury trial in any resulting litigation.'/>
+        <property name='df_LT.copyright' value='Copyright (c) 2008-2021 Sonatype, Inc.&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;Contributors:&#xA;Sonatype, Inc. - initial API and implementation'/>
+        <property name='maven-groupId' value='org.sonatype.m2e.egit'/>
+        <property name='maven-artifactId' value='org.sonatype.m2e.egit.feature'/>
+        <property name='maven-version' value='0.16.0-SNAPSHOT'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.sonatype.m2e.egit.feature.feature.jar' version='0.16.0.202112122140'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.sonatype.m2e.egit.feature' version='0.16.0.202112122140'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.sonatype.m2e.egit.feature' version='0.16.0.202112122140'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='%25licenseURL' url='%25licenseURL'>
+          %license
+        </license>
+      </licenses>
+      <copyright>
+        %copyright
+      </copyright>
+    </unit>
+    <unit id='a.jre.javase' version='11.0.0' singleton='false'>
+      <provides size='258'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' version='11.0.0'/>
+        <provided namespace='java.package' name='java.applet' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.image' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.table' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.desktop' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.jpeg' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.type' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.cert' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.zip' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.file' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.views' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.callback' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.element' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.bootstrap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.nio.sctp' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.validation' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink.beans' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jndi.ldap.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jarsigner' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.net.httpserver' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jdi.connect' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.events' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.datatransfer' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.html' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jdi.event' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.metal' version='0.0.0'/>
+        <provided namespace='java.package' name='java.net.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.activation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.colorchooser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.logging' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink.support' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.x500' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jshell.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jfr' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.directory' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.chrono' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.loading' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth' version='0.0.0'/>
+        <provided namespace='java.package' name='java.math' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.geom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.transaction.xa' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.stax' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.traversal' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.swing.interop' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt' version='0.0.0'/>
+        <provided namespace='java.package' name='java.text' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.undo' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.management' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.datatype' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.login' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.html' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.security.auth.login' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jdi.connect.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.beans' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.metadata' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.prefs' version='0.0.0'/>
+        <provided namespace='java.package' name='java.net' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.bmp' version='0.0.0'/>
+        <provided namespace='java.package' name='sun.misc' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.format' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.nashorn.api.scripting' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.concurrent' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.sampled' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.server' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.parsers' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.serial' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.synth' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.basic' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.function' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.net' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.image.renderable' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink.linker' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.nio.file' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ls' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.smartcardio' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink.linker.support' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.dgc' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.annotation.processing' version='0.0.0'/>
+        <provided namespace='java.package' name='java.net.http' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.invoke' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.cert' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.catalog' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.nio' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.management' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.concurrent.atomic' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.rmi.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.openmbean' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.color' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.rtf' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.javadoc.doclet' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.print' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.multi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.event' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.channels.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.net.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.events' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.registry' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.attribute' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.java.accessibility.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.file.attribute' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.management.jfr' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.javadoc' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jdi.request' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.instrument' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.ref' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.regex' version='0.0.0'/>
+        <provided namespace='java.package' name='org.ietf.jgss' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.midi.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.filechooser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.reflect' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.helpers' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jshell' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.attach' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.attribute.standard' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jshell.tool' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.jconsole' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.javadoc' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.security.jarsigner' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.security.auth' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.kerberos' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='java.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.acl' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.channels' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.temporal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.stylesheets' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.charset' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.midi' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.net' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.monitor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.source.doctree' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.net.httpserver.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.dnd' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jshell.execution' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.im' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.html.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.css' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.javac' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jdi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.charset.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.security.jgss' version='0.0.0'/>
+        <provided namespace='java.package' name='java.text.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.timer' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.file.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.keyinfo' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.accessibility' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.source.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.namespace' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.font' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.interfaces' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.attach.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.relation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.modelmbean' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.sampled.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.remote.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.event' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.concurrent.locks' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.nimbus' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.border' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jfr.consumer' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.remote' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.tiff' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.ext' version='0.0.0'/>
+        <provided namespace='java.package' name='sun.reflect' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.security.auth.callback' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.sasl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.security.auth.module' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.ldap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.zone' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.nashorn.api.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='netscape.javascript' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.im.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.beans.beancontext' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.script' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.module' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.source.util' version='0.0.0'/>
+        <provided namespace='java.package' name='java.io' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.jar' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto.interfaces' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ranges' version='0.0.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.2.0'/>
+        <provided namespace='osgi.ee' name='JRE' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='JRE' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.2.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.3.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.4.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.5.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.6.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.7.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='10.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='11.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact1' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact1' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact1' version='10.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact1' version='11.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact2' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact2' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact2' version='10.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact2' version='11.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact3' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact3' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact3' version='10.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact3' version='11.0.0'/>
+      </provides>
+      <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
+    </unit>
+    <unit id='a.jre.javase' version='16.0.0' singleton='false'>
+      <provides size='263'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' version='16.0.0'/>
+        <provided namespace='java.package' name='java.applet' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.image' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.table' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.desktop' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.jpeg' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.type' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.cert' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.zip' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.file' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.views' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.callback' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.element' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.bootstrap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.nio.sctp' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.validation' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink.beans' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jndi.ldap.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jarsigner' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.net.httpserver' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jdi.connect' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.events' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.datatransfer' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.html' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jdi.event' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.metal' version='0.0.0'/>
+        <provided namespace='java.package' name='java.net.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.activation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.colorchooser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.logging' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink.support' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.x500' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jshell.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jfr' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.directory' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.chrono' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.loading' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth' version='0.0.0'/>
+        <provided namespace='java.package' name='java.math' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.geom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.transaction.xa' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.stax' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.traversal' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.swing.interop' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt' version='0.0.0'/>
+        <provided namespace='java.package' name='java.text' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.undo' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.management' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.datatype' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.login' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.html' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.security.auth.login' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jdi.connect.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.beans' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.metadata' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.prefs' version='0.0.0'/>
+        <provided namespace='java.package' name='java.net' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.bmp' version='0.0.0'/>
+        <provided namespace='java.package' name='sun.misc' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.format' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.nashorn.api.scripting' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.concurrent' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.sampled' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.server' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.parsers' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.serial' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.synth' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.basic' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.function' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.net' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.image.renderable' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink.linker' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.nio.file' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ls' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.smartcardio' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink.linker.support' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.dgc' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.annotation.processing' version='0.0.0'/>
+        <provided namespace='java.package' name='java.net.http' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.invoke' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.cert' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.catalog' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.nio' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.management' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.concurrent.atomic' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.rmi.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.openmbean' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.color' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.rtf' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.javadoc.doclet' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.print' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.multi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.event' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.channels.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.net.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.events' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.registry' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.attribute' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.java.accessibility.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.file.attribute' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.management.jfr' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.javadoc' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jdi.request' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.instrument' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.ref' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.regex' version='0.0.0'/>
+        <provided namespace='java.package' name='org.ietf.jgss' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.midi.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.filechooser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.reflect' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.helpers' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jshell' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.attach' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.attribute.standard' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jshell.tool' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.jconsole' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.javadoc' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.security.jarsigner' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.security.auth' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.kerberos' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='java.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.acl' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.channels' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.temporal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.stylesheets' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.charset' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.midi' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.net' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.monitor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.source.doctree' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.net.httpserver.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.dnd' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jshell.execution' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.im' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.html.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.css' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.javac' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jdi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.charset.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.security.jgss' version='0.0.0'/>
+        <provided namespace='java.package' name='java.text.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.timer' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.file.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.keyinfo' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.accessibility' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.source.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.namespace' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.font' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.interfaces' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.attach.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.relation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.modelmbean' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.sampled.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.remote.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.event' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.concurrent.locks' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.nimbus' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.border' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jfr.consumer' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.remote' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.tiff' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.ext' version='0.0.0'/>
+        <provided namespace='java.package' name='sun.reflect' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.security.auth.callback' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.sasl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.security.auth.module' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.ldap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.zone' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.nashorn.api.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='netscape.javascript' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.im.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.beans.beancontext' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.script' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.module' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.source.util' version='0.0.0'/>
+        <provided namespace='java.package' name='java.io' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.jar' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto.interfaces' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ranges' version='0.0.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.2.0'/>
+        <provided namespace='osgi.ee' name='JRE' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='JRE' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.2.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.3.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.4.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.5.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.6.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.7.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='10.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='11.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='12.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='13.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='14.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='15.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='16.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact1' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact1' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact1' version='10.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact1' version='11.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact2' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact2' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact2' version='10.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact2' version='11.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact3' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact3' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact3' version='10.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact3' version='11.0.0'/>
+      </provides>
+      <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
+    </unit>
+    <unit id='a.jre.javase' version='17.0.0' singleton='false'>
+      <provides size='264'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' version='17.0.0'/>
+        <provided namespace='java.package' name='java.applet' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.image' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.table' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.desktop' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.jpeg' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.type' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.cert' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.zip' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.file' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.views' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.callback' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.element' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.bootstrap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.nio.sctp' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.validation' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink.beans' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jndi.ldap.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jarsigner' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.net.httpserver' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jdi.connect' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.events' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.datatransfer' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.html' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jdi.event' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.metal' version='0.0.0'/>
+        <provided namespace='java.package' name='java.net.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.activation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.colorchooser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.logging' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink.support' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.x500' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jshell.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jfr' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.directory' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.chrono' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.loading' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth' version='0.0.0'/>
+        <provided namespace='java.package' name='java.math' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.geom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.transaction.xa' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.stax' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.traversal' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.swing.interop' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt' version='0.0.0'/>
+        <provided namespace='java.package' name='java.text' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.undo' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.management' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.datatype' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.login' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.html' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.security.auth.login' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jdi.connect.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.beans' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.metadata' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.prefs' version='0.0.0'/>
+        <provided namespace='java.package' name='java.net' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.bmp' version='0.0.0'/>
+        <provided namespace='java.package' name='sun.misc' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.format' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.nashorn.api.scripting' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.concurrent' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.sampled' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.server' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.parsers' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.serial' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.synth' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.basic' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.function' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.net' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.image.renderable' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink.linker' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.nio.file' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ls' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.smartcardio' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink.linker.support' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.dgc' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.annotation.processing' version='0.0.0'/>
+        <provided namespace='java.package' name='java.net.http' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.invoke' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.cert' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.catalog' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.nio' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.management' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.concurrent.atomic' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.rmi.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.openmbean' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.color' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.rtf' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.javadoc.doclet' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.print' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.multi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.event' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.channels.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.net.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.events' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.registry' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.attribute' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.java.accessibility.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.file.attribute' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.management.jfr' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.javadoc' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jdi.request' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.instrument' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.ref' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.regex' version='0.0.0'/>
+        <provided namespace='java.package' name='org.ietf.jgss' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.midi.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.filechooser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.reflect' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.helpers' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jshell' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.attach' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.attribute.standard' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jshell.tool' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.jconsole' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.javadoc' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.security.jarsigner' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.security.auth' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.kerberos' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='java.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.acl' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.channels' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.temporal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.stylesheets' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.charset' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.midi' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.net' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.monitor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.source.doctree' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.net.httpserver.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.dnd' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jshell.execution' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.im' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.html.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.css' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.javac' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.jdi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.charset.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.security.jgss' version='0.0.0'/>
+        <provided namespace='java.package' name='java.text.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.timer' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.file.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.keyinfo' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.accessibility' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.source.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.namespace' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.font' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.interfaces' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.attach.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.relation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.modelmbean' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.sampled.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.remote.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.event' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.concurrent.locks' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.nimbus' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.border' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jfr.consumer' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.remote' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.tiff' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.ext' version='0.0.0'/>
+        <provided namespace='java.package' name='sun.reflect' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.security.auth.callback' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.sasl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.security.auth.module' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.ldap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.zone' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.nashorn.api.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='netscape.javascript' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.im.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.beans.beancontext' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.script' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.module' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.source.util' version='0.0.0'/>
+        <provided namespace='java.package' name='java.io' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.jar' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto.interfaces' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ranges' version='0.0.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.2.0'/>
+        <provided namespace='osgi.ee' name='JRE' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='JRE' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.2.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.3.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.4.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.5.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.6.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.7.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='10.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='11.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='12.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='13.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='14.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='15.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='16.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='17.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact1' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact1' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact1' version='10.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact1' version='11.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact2' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact2' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact2' version='10.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact2' version='11.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact3' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact3' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact3' version='10.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact3' version='11.0.0'/>
+      </provides>
+      <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
+    </unit>
+    <unit id='202112122140.org.eclipse.m2e.extensions' version='1.0.0.07U-cM0Fo677375575775A3'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='m2e extensions'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='202112122140.org.eclipse.m2e.extensions' version='1.0.0.07U-cM0Fo677375575775A3'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.sonatype.m2e.egit.feature.feature.group' range='[0.16.0.202112122140,0.16.0.202112122140]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+  </units>
+</repository>
