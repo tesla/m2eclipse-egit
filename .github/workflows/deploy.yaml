@@ -27,10 +27,10 @@ jobs:
         ./mvnw -B verify --update-snapshots -Pflat-repo
 
     - name: Upload p2 update site
-        uses: actions/upload-artifact@v2
-        with:
-          name: m2eclipse-egit
-          path: org.sonatype.m2e.egit.repository/target/repository/*
+      uses: actions/upload-artifact@v2
+      with:
+        name: m2eclipse-egit
+        path: org.sonatype.m2e.egit.repository/target/repository/*
 
     - name: Upload flat p2 update site
       if: github.ref == 'refs/heads/main'
