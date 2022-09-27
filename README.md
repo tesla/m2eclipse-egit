@@ -5,11 +5,12 @@
 See https://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html
 
 ## Installation
-Requires Java 11 to run.
+Requires Java 17 to run.
 
 In Eclipse,
   - go to `Help` > `Install New Software...` and add this p2 repository:
-      - https://tesla.github.io/m2eclipse-egit/updates/
+  	  * `https://github.com/tesla/m2eclipse-egit/releases/download/latest/` for m2e 2.x compatible CI builds
+      * `https://tesla.github.io/m2eclipse-egit/updates/` for latest m2e 1.x compatible builds
   - Select `Maven SCM Handler for EGit`
   - Finish the installation
   - Restart Eclipse 
