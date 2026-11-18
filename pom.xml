@@ -20,8 +20,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <repositoryPathId>m2eclipse-egit</repositoryPathId>
     <p2MetadataName>Maven SCM Handler for EGit</p2MetadataName>
-    <tychoVersion>2.7.5</tychoVersion>
-    <eclipse.url>https://download.eclipse.org/releases/2022-09</eclipse.url>
+    <tychoVersion>5.0.4</tychoVersion>
+    <eclipse.url>https://download.eclipse.org/releases/2026-09</eclipse.url>
     <tycho.test.jvmArgs>-Xmx512m</tycho.test.jvmArgs>
   </properties>
 
@@ -103,25 +103,6 @@
       <properties>
         <tycho.test.jvmArgs>-Xmx512m -XstartOnFirstThread</tycho.test.jvmArgs>
       </properties>
-      <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.eclipse.tycho</groupId>
-              <artifactId>tycho-surefire-plugin</artifactId>
-              <configuration>
-                <dependencies>
-                  <dependency>
-                    <artifactId>org.eclipse.jdt.launching.macosx</artifactId>
-                    <version>0.0.0</version>
-                    <type>eclipse-plugin</type>
-                  </dependency>
-                </dependencies>
-              </configuration>
-            </plugin>
-          </plugins>
-        </pluginManagement>
-      </build>
     </profile>
 
   </profiles>
